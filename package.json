@@ -1,26 +1,31 @@
 {
-  "name": "bmi",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "argparse",
+  "description": "CLI arguments parser. Native port of python's argparse.",
+  "version": "2.0.1",
+  "keywords": [
+    "cli",
+    "parser",
+    "argparse",
+    "option",
+    "args"
+  ],
+  "main": "argparse.js",
+  "files": [
+    "argparse.js",
+    "lib/"
+  ],
+  "license": "Python-2.0",
+  "repository": "nodeca/argparse",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "lint": "eslint .",
+    "test": "npm run lint && nyc mocha",
+    "coverage": "npm run test && nyc report --reporter html"
   },
   "devDependencies": {
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
-    "vite": "^5.2.0"
+    "@babel/eslint-parser": "^7.11.0",
+    "@babel/plugin-syntax-class-properties": "^7.10.4",
+    "eslint": "^7.5.0",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0"
   }
 }
